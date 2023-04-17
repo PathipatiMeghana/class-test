@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int string_compare(const char *string1, const char *string2) {
+    while (*string1 && *string2 && (*string1 == *string2)) {
+        string1++;
+        string2++;
+    }
+    return (*string1 == *string2) ? 0 : (*string1 > *string2) ? 1 : -1;
+}
+
+int main() {
+    char str1[] = "Hello";
+    char str2[] = "Hello";
+    char str3[] = "World";
+
+    printf("%s and %s are equal: %d\n", str1, str2, string_compare(str1, str2));
+    printf("%s and %s are equal: %d\n", str1, str3, string_compare(str1, str3));
+
+    return 0;
+}
