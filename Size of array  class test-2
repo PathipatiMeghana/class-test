@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int A[] = {33,55,12,17,29};
+    int n = sizeof(A)/sizeof(A[0]); 
+    int max_element = A[0]; 
+    for (int i = 1; i < n; i++) {
+        if (A[i] > max_element) {
+            max_element = A[i];
+        }
+    }
+    
+    printf("The largest element in the array is: %d\n", max_element);
+    return 0;
+}
